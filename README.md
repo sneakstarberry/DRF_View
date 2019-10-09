@@ -47,6 +47,7 @@ class PostDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 ## Mixin_View
+<pre>
 # 데이터 처리 대상 : 모델, Serializer import 시키기
 from post.models import Post
 from post.serializer import PostSerializer
@@ -74,3 +75,4 @@ class PostDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
                 mixins.DestroyModelMixin, generics.GenericAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+<pre/>
