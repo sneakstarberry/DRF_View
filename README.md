@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
-<pre/><code/>
+
 
 class PostList(APIView):
     def get(self, request):
@@ -45,6 +45,7 @@ class PostDetail(APIView):
         post = self.get_object(pk)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+ <pre/><code/>
 <hr/>
 ## Mixin_View
 <code>
