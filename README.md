@@ -1,7 +1,8 @@
 
-```from post.models import Post```<br/>
-```from post.serializer import PostSerializer```
 <pre><code>
+from post.models import Post
+from post.serializer import PostSerializer
+
     from rest_framework.response import Response
     from rest_framework import status
     from rest_framework.views import APIView
