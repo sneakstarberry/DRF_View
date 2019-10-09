@@ -8,18 +8,18 @@
     from django.shortcuts import get_object_or_404
 <pre/><code/>
 
-class PostList(APIView):
-    def get(self, request):
-        posts = Post.objects.all()
-        serializer = PostSerializer(posts, many=True) 
-        return Response(serializer.data) 
-    
-    def post(self, request):
-        serializer = PostSerializer(data=request.data)
-        if serializer.is_valid():  
-            serializer.save()       
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    class PostList(APIView):
+        def get(self, request):
+            posts = Post.objects.all()
+            serializer = PostSerializer(posts, many=True) 
+            return Response(serializer.data) 
+
+        def post(self, request):
+            serializer = PostSerializer(data=request.data)
+            if serializer.is_valid():  
+                serializer.save()       
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # PostList 클래스와는 달리 pk값을 받음 (메소드에 pk인자)
