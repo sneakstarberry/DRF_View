@@ -1,7 +1,5 @@
-# DRF_View
-'''
-# 데이터 처리 대상
-from post.models import Post
+
+<code>from post.models import Post<code/>
 from post.serializer import PostSerializer
 # status에 따라 직접 Response를 처리할 것
 from django.http import Http404 # Get Object or 404 직접 구현
@@ -55,4 +53,4 @@ class PostDetail(APIView):
         post = self.get_object(pk)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-'''
+
