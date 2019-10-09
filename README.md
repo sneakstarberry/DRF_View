@@ -55,8 +55,8 @@ from post.serializer import PostSerializer
 from rest_framework import generics
 from rest_framework import mixins
 
-# mixin 직접 보기 : https://github.com/encode/django-rest-framework/blob/master/rest_framework/mixins.py
-# genericAPIView 직접 보기 : https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py
+mixin 직접 보기 : <https://github.com/encode/django-rest-framework/blob/master/rest_framework/mixins.py>
+genericAPIView 직접 보기 : <https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py>
 
 class PostList(mixins.ListModelMixin, mixins.CreateModelMixin, 
                 generics.GenericAPIView):
