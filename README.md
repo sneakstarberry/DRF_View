@@ -118,6 +118,9 @@ from rest_framework import renderers
 from rest_framework.decorators import action
 from django.http import HttpResponse
 
+#ModelViewSet이 ListView와 DetailView를 상속하고 있기 때문.
+
+
     # @action(method=['post'])기본은 'get'방식
     @action(detail=True, renderer_classes=[renderers.StaticHTMLRenderer])
     # 그냥 얍을 띄우는 custom api
