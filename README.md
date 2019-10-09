@@ -1,5 +1,5 @@
 
-<pre><code>from post.models import Post<code/><pre/>
+'''from post.models import Post'''
 
 from post.serializer import PostSerializer
 # status에 따라 직접 Response를 처리할 것
