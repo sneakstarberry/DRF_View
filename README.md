@@ -111,3 +111,16 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PostSerializer
 </pre></code>
 
+## ViewSets
+
+<pre><code>
+from rest_framework import renderers
+from rest_framework.decorators import action
+from django.http import HttpResponse
+
+    # @action(method=['post'])기본은 'get'방식
+    @action(detail=True, renderer_classes=[renderers.StaticHTMLRenderer])
+    # 그냥 얍을 띄우는 custom api
+    def highlight(self, request, *args, **kwargs):
+        return HttpResponse("얍")
+</pre></code>
