@@ -49,7 +49,8 @@ class PostDetail(APIView):
 <hr/>
 
 ## Mixin_View
-
+mixin 직접 보기 : <https://github.com/encode/django-rest-framework/blob/master/rest_framework/mixins.py>
+genericAPIView 직접 보기 : <https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py>
 <pre><code>
 # 데이터 처리 대상 : 모델, Serializer import 시키기
 from post.models import Post
@@ -58,8 +59,7 @@ from post.serializer import PostSerializer
 from rest_framework import generics
 from rest_framework import mixins
 
-mixin 직접 보기 : <https://github.com/encode/django-rest-framework/blob/master/rest_framework/mixins.py>
-genericAPIView 직접 보기 : <https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py>
+
 
 class PostList(mixins.ListModelMixin, mixins.CreateModelMixin, 
                 generics.GenericAPIView):
