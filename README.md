@@ -88,3 +88,26 @@ class PostDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
         return self.destroy(request, *args, **kwargs)
 
 </pre></code>
+
+## Generic_CBV
+rest_framework/generics.py<br/>
+<https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py>
+<br/>
+ListCreateAPIView<br/>
+<https://github.com/encode/django-rest-framework/blob/0e1c5d313232a131bb4a1a414abf921744ab40e0/rest_framework/generics.py#L232>
+<br/>
+RetrieveUpdateDestroyAPIView<br/>
+<https://github.com/encode/django-rest-framework/blob/0e1c5d313232a131bb4a1a414abf921744ab40e0/rest_framework/generics.py#L274>
+<br/>
+<pre><code>
+from rest_framework import generics
+
+class PostList(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+</pre></code>
+
