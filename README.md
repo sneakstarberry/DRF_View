@@ -45,7 +45,7 @@ class PostDetail(APIView):
         post = self.get_object(pk)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
+<hr/>
 ## Mixin_View
 <code>
 # 데이터 처리 대상 : 모델, Serializer import 시키기
