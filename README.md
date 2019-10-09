@@ -1,5 +1,5 @@
 
-```from post.models import Post```
+```from post.models import Post```<br/>
 ```from post.serializer import PostSerializer```
 
 from django.http import Http404 # Get Object or 404 직접 구현
